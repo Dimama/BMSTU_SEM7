@@ -1,0 +1,35 @@
+Requests with method: OPTIONS
+
+
+Request to mail.ru
+Status code:400
+Headers:{'X-XSS-Protection': '1; mode=block; report=https://cspreport.mail.ru/xxssprotection', 'Content-Type': 'text/html', 'Connection': 'keep-alive', 'Date': 'Sat, 07 Oct 2017 07:20:09 GMT', 'Transfer-Encoding': 'chunked', 'Server': 'nginx/1.10.3', 'X-Content-Type-Options': 'nosniff'}
+
+
+Request to ya.ru
+Status code:403
+Headers:{'X-XSS-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=utf-8', 'Date': 'Sat, 07 Oct 2017 07:20:09 GMT', 'Content-Encoding': 'gzip', 'ETag': 'W/"59d75ee2-3077"', 'X-Content-Type-Options': 'nosniff', 'Transfer-Encoding': 'chunked'}
+
+
+Request to www.rambler.ru
+Status code:403
+Headers:{'Content-Encoding': 'gzip', 'Content-Type': 'text/html; charset=utf-8', 'Connection': 'keep-alive', 'Set-Cookie': 'ruid=vAsAACmA2Fk6Ora0Adg4AwB=; expires=Thu, 31-Dec-37 23:55:55 GMT; domain=.rambler.ru; path=/', 'Date': 'Sat, 07 Oct 2017 07:20:09 GMT', 'Transfer-Encoding': 'chunked', 'Server': 'nginx', 'Keep-Alive': 'timeout=50', 'P3P': 'CP="NON DSP NID ADMa DEVa TAIa PSAa PSDa OUR IND UNI COM NAV"'}
+
+
+Request to www.google.ru
+Status code:405
+Headers:{'Content-Length': '1592', 'X-XSS-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=UTF-8', 'Allow': 'GET, HEAD', 'Date': 'Sat, 07 Oct 2017 07:20:09 GMT', 'X-Frame-Options': 'SAMEORIGIN', 'Server': 'gws'}
+
+
+Request to www.github.com/
+Status code:404
+Headers:{'X-Request-Id': '3fafbcdf81ddcc12fe81fb39fc116b52', 'X-XSS-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=utf-8', 'Server': 'GitHub.com', 'Date': 'Sat, 07 Oct 2017 07:20:11 GMT', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'Transfer-Encoding': 'chunked', 'Status': '404 Not Found', 'Public-Key-Pins': 'max-age=5184000; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="; pin-sha256="k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws="; pin-sha256="K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="; pin-sha256="IQBnNBEiFuhj+8x6X8XLgh01V9Ic5/V3IRQLNFFc7v4="; pin-sha256="iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0="; pin-sha256="LvRiGEjRqfzurezaWuj8Wie2gyHMrW5Q06LspMnox7A="; includeSubDomains', 'X-Runtime': '0.004164', 'Content-Security-Policy': "default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src render.githubusercontent.com; connect-src 'self' uploads.github.com status.github.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com; font-src assets-cdn.github.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; img-src 'self' data: assets-cdn.github.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com collector.githubapp.com avatars0.githubusercontent.com avatars1.githubusercontent.com avatars2.githubusercontent.com avatars3.githubusercontent.com github-cloud.s3.amazonaws.com; media-src 'none'; script-src assets-cdn.github.com; style-src 'unsafe-inline' assets-cdn.github.com", 'X-Frame-Options': 'deny', 'X-GitHub-Request-Id': 'D0AF:2B87:BDB578:131CD74:59D8802B', 'X-Content-Type-Options': 'nosniff', 'X-Runtime-rack': '0.010272'}
+
+
+Request to www.linkedin.com/
+Exception: HTTPConnectionPool(host='www.linkedin.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x01C26C10>, 'Connection to www.linkedin.com timed out. (connect timeout=5)'))
+
+
+Request to www.apple.com/
+Status code:200
+Headers:{'Content-Length': '0', 'X-Xss-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=UTF-8', 'X-Content-Type-Options': 'nosniff', 'Allow': 'GET,HEAD,POST,OPTIONS', 'Date': 'Sat, 07 Oct 2017 07:20:18 GMT', 'Cache-Control': 'max-age=251', 'X-Frame-Options': 'SAMEORIGIN', 'Server': 'Apache', 'Connection': 'keep-alive', 'Expires': 'Sat, 07 Oct 2017 07:24:29 GMT'}

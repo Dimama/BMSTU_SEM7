@@ -1,0 +1,16 @@
+Requests with method: HEAD
+
+
+Request to vk.com
+Status code:501
+Headers:{'Content-Length': '177', 'Content-Type': 'text/html', 'Server': 'nginx', 'Connection': 'close', 'Date': 'Sat, 07 Oct 2017 07:20:18 GMT'}
+
+
+Request to www.apple.com
+Status code:200
+Headers:{'Content-Encoding': 'gzip', 'Content-Type': 'text/html; charset=UTF-8', 'Server': 'Apache', 'Date': 'Sat, 07 Oct 2017 07:20:18 GMT', 'Vary': 'Accept-Encoding', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'max-age=243', 'Accept-Ranges': 'bytes', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Connection': 'keep-alive', 'Expires': 'Sat, 07 Oct 2017 07:24:21 GMT', 'Content-Length': '6794'}
+
+
+Request to www.msn.com
+Status code:200
+Headers:{'X-Activity-Id': '940c661e-8180-473c-9c4e-1be397cc0546', 'Content-Encoding': 'gzip', 'Content-Type': 'text/html; charset=utf-8', 'X-AspNetMvc-Version': '5.2', 'X-Az': '{did:83e6d931045c4547ae3a5a0388efdd8a, rid: 10, sn: neurope-prod-hp, dt: 2017-10-05T16:31:20.4826826Z, bt: 2017-10-03T00:39:42.4524362Z}', 'Date': 'Sat, 07 Oct 2017 07:20:18 GMT', 'X-XSS-Protection': '1', 'X-Powered-By': 'ASP.NET', 'Access-Control-Allow-Origin': '*', 'Vary': 'User-Agent', 'Access-Control-Allow-Methods': 'HEAD,GET,OPTIONS', 'X-UA-Compatible': 'IE=Edge;chrome=1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-MSEdge-Ref': 'Ref A: 940C661E8180473C9C4E1BE397CC0546 Ref B: AMSEDGE0617 Ref C: 2017-10-07T07:20:18Z', 'Set-Cookie': 'DefaultLocation=cnUtcnV8NTUuNzU3fDM3LjYxNXzQnNC-0YHQutCy0LB80JzQvtGB0LrQstCwfNCg0L7RgdGB0LjRj3xSVXx8LjAw0; domain=www.msn.com; expires=Mon, 07-Oct-2019 07:20:18 GMT; path=/; HttpOnly, _EDGE_S=F=1; path=/; httponly; domain=msn.com, _EDGE_V=1; path=/; httponly; expires=Thu, 01-Nov-2018 07:20:18 GMT; domain=msn.com, MUID=048EEFB89F8C62F3210AE4AC9E2363C1; path=/; expires=Thu, 01-Nov-2018 07:20:18 GMT; domain=msn.com', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-AppVersion': '2.0.6485.1182', 'X-Content-Type-Options': 'nosniff', 'Expires': '-1', 'Content-Length': '15925'}

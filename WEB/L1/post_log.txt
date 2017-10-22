@@ -1,0 +1,11 @@
+Requests with method: POST
+
+
+Request to www.google.com
+Status code:405
+Headers:{'Content-Length': '1589', 'X-XSS-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=UTF-8', 'Allow': 'GET, HEAD', 'Date': 'Sat, 07 Oct 2017 07:20:19 GMT', 'X-Frame-Options': 'SAMEORIGIN', 'Server': 'gws'}
+
+
+Request to www.yandex.ru
+Status code:403
+Headers:{'X-XSS-Protection': '1; mode=block', 'Content-Type': 'text/html; charset=utf-8', 'Date': 'Sat, 07 Oct 2017 07:20:19 GMT', 'Content-Encoding': 'gzip', 'ETag': 'W/"59d75ee2-3077"', 'X-Content-Type-Options': 'nosniff', 'Transfer-Encoding': 'chunked'}
