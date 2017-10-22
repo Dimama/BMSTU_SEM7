@@ -1,5 +1,0 @@
-<head></head>
-<body>
-	<title>HACK.html</title>
-	<h3>HACK!</h3> 
-</body>
