@@ -1,0 +1,4 @@
+PORT = 8080
+MSGLEN = 1024
+HOST = 'localhost'
+END_FILE = "END_OF_FILE"
