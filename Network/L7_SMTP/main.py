@@ -26,22 +26,9 @@ def main():
 	except IndexError:
 		print ('Set mail, key_word, text1, text2, text3 by argv')
 		return
-	
-	text1 = get_text(file1)
-	text2 = get_text(file2)
-	text3 = get_text(file3)
 
-	#print(text1+"\n\n")
-	#print(text2+"\n\n")
-	#print(text3+"\n")
-
-	allMessages = [text1, text2, text3]
+	allMessages = list(map(get_text, [file1, file2, file3]))
 	listToSend = make_sorted_list_to_send(allMessages, word)
-
-	#print("Messages: ")
-	#for text in listToSend:
-		#print(text)
-
 	send_messages(address, listToSend)
 
 if __name__ == "__main__":
