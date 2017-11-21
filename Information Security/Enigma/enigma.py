@@ -4,10 +4,19 @@ from rotor import Rotor
 class Enigma:
     def __init__(self, rotors, reflector):
         self.rotors = rotors
-        sefl.reflector = reflector
+        self.reflector = reflector
 
-    def encrypt(self):
+
+    def encrypt(self, item):
         pass
 
-    def decrypt(self):
-        pass
+
+    def encryptStr(self, string):
+        res = ""
+        for item in string:
+            res += self.encrypt(item)
+        return res
+
+
+
+    
