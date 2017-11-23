@@ -9,7 +9,6 @@ class Reflector:
 
     def handle_byte(self, item):
         pos = self.__arr.index(item)
-        print("Pos: " + str(pos)) # debug
         if not pos % 2:
             return self.__arr[pos + 1]
         return self.__arr[pos - 1]

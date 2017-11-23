@@ -3,46 +3,44 @@ from random import shuffle
 
 
 class Rotor:
-    def __init__(self, next_rotor=None):
+    def __init__(self):
         self.__arr1 = bytearray(range(BYTE_MAX))
         self.__arr2 = bytearray(range(BYTE_MAX))
-        self.__next_rotor = next_rotor
         self.__offset = 0 
+        self.__rotate_next = False
 
         shuffle(self.__arr2)
-    
-    @property
-    def next_rotor(self):
-        return self.__next_rotor
-
-    @next_rotor.setter
-    def next_rotor(self, rotor):
-        self.__next_rotor = rotor
 
     @property
-    def offset(self):
-        return self.__offset
+    def rotate_next(self):
+        return self.__rotate_next
 
-    def rotate(self):
-        self.__offset = (self.__offset + 1) % BYTE_MAX 
-        
+    @rotate_next.setter
+    def rotate_next(self, value):
+        self.__rotate_next = False
+
+    def rotate(self, offset=1):
+        self.__offset += offset
+
         if self.__offset == BYTE_MAX:
-            pass # rotate next
-
+            self.__offset = 0
+            self.__rotate_next = True
+                   
     def reset(self):
         self.__offset = 0
-        #self.__arr1 = bytearray(range(BYTE_MAX))
 
-    def handle_byte(self, item):
-        pos = self.__arr1.index(item)
-        # rotate ? 
-        return self.__arr2[(pos +self.__offset) % BYTE_MAX]
+    def handle_byte_straight(self, item):
+        pos = self.__arr1.index(item) 
+        return self.__arr2[(pos + self.__offset) % (BYTE_MAX)]
+
+    def handle_byte_back(self, item):
+        pos = self.__arr2.index(item) - self.__offset
+        return self.__arr1[pos]
         
     def __str__(self):
         res = "\nArr1: {0}".format(self.__arr1)
         res += "\nArr2: {0}".format(self.__arr2)
         res += "\nOffset: {0}".format(self.__offset)
-        res += "\nNext rotor: {0}".format(id(self.__next_rotor))
 
         return res
         

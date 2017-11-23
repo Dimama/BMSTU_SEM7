@@ -12,56 +12,46 @@ def main():
         print("Set file as argv[1]")
         return
 
-    # init rotors
     rotors = []
     for _ in range(ROTORS_COUNT):
         rotors.append(Rotor())
-
-    # set refs to next rotor
-    for i in range(ROTORS_COUNT - 1):
-        rotors[i].next_rotor = rotors[i+1]
         
-    #for i in range(ROTORS_COUNT):
-      #  print(id(rotors[i]))
-       # print(rotors[i])
-
-    # print(id(None))
-    # init Enigma
-    
-    reflector = Reflector()
-    print(reflector)
-    byte = reflector.handle_byte(0)
-    print(byte)
-    print(reflector.handle_byte(byte))
-
     enigma = Enigma(rotors, Reflector())
+   
+    print(enigma)
 
-    enc_file = open("enc_" + sys.argv[1], "wb")
+    enc_file_name = "enc_" + sys.argv[1] 
+    dec_file_name = "dec_" + sys.argv[1] 
+    enc_file = open(enc_file_name, "wb")
 
+    print("Start encrypting '{0}' ...".format(sys.argv[1]))
     while True:
         buf = file.read(MAX_LEN)
-        #print(buf)
         if(not len(buf)):
             file.close()
             enc_file.close()
+            print("Encrypting done. Results saved in file: '{0}'".format(enc_file_name))
             break
         else:
-          #  enc_str = enigma.encryptStr(buf)
-            enc_file.write(buf) # encrypt
+            enc_str = enigma.encryptStr(buf)
+            enc_file.write(enc_str) 
 
-    enc_file = open("enc_" + sys.argv[1], "rb")    
-    dec_file = open("dec_" + sys.argv[1], "wb")
+
+    enc_file = open(enc_file_name, "rb")    
+    dec_file = open(dec_file_name, "wb")
     
+    enigma.reset()
+    print("Start decrypting '{0}' ...".format(enc_file_name))
     while True:
         buf = enc_file.read(MAX_LEN)
         if(not len(buf)):
             enc_file.close()
             dec_file.close()
+            print("Decrypting done. Results saved in file: '{0}'".format(dec_file_name))
             break
         else:
-         #   dec_str = enigma.encryptStr(buf)
-            dec_file.write(buf) # decrypt
-    
+            dec_str = enigma.encryptStr(buf)
+            dec_file.write(dec_str)
     
 if __name__ == "__main__":
     main()
