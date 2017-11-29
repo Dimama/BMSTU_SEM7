@@ -14,6 +14,14 @@ Modeling::Modeling(Clients* _clients, std::vector<Automate*>& _autos, Window* _w
 
 }
 
+void Modeling::set_data(Clients *_clients, std::vector<Automate *> &_autos, Window *_window, double _time)
+{
+    clients = _clients;
+    autos =  _autos;
+    window = _window;
+    time = _time;
+}
+
 void Modeling::process()
 {
     while (time > 0)
@@ -64,6 +72,7 @@ unsigned Modeling::get_to_window_count()
     return clients->get_count_to_window();
 }
 
+
 void Modeling::get_client()
 {
     unsigned min_size = window->get_queue_size();
@@ -88,5 +97,10 @@ void Modeling::get_client()
         autos[comp]->get_client();
     }
 
+
+}
+
+Modeling::Modeling()
+{
 
 }

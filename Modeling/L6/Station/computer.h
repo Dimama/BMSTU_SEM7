@@ -27,7 +27,7 @@ protected:
 
 class Automate: public Computer
 {
-Q_OBJECT
+    Q_OBJECT
 signals:
     void to_window();
 
@@ -44,7 +44,7 @@ private:
 
 class Window: public Computer
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     Window(double t1, double t2): Computer(t1, t2) {}
     void process();

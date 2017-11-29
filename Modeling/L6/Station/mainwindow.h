@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "modeling.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,11 +16,13 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+
 private slots:
     void on_btn_model_clicked();
 
-private:
-    Ui::MainWindow *ui;
+ private:
+   Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H

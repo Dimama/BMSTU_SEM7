@@ -6,6 +6,8 @@
 #include <vector>
 
 
+#include "mainwindow.h"
+
 class Modeling: public QObject
 {
 Q_OBJECT
@@ -13,7 +15,9 @@ private slots:
     void get_client();
 
 public:
+    Modeling();
     Modeling(Clients* _clients, std::vector<Automate*>& _autos, Window* _window, double _time);
+    void set_data(Clients* _clients, std::vector<Automate*>& _autos, Window* _window, double _time);
     void process();
     unsigned get_success_count();
     unsigned get_queue_size();
